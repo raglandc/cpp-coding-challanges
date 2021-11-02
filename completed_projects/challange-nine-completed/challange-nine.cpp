@@ -1,6 +1,6 @@
 /*
-CHALLENGE CODE WRITTEN BY CHRIS RAGLAND
-COPYRIGHT 2021
+Program Goal: Display a menu to a user that will repeat until he quits with a "Q" or "q".
+              Simple math using a list of numbers via a vector.
 */
 
 #include <iostream>
@@ -28,11 +28,12 @@ int main() {
     cin >> selection;
 
     //if statement to handle all cases
-    
     if(selection == 'Q' || selection == 'q') {
+
         cout << "Goodbye\n" << endl;
-        break;
+
     } else if (selection == 'P' || selection == 'p') {
+
         if(list.empty()) {
             cout << "[ ]" << endl;
         } else {
@@ -49,7 +50,9 @@ int main() {
             cin >> number;
             list.push_back(number);
             cout << number << " added" << endl;
+
     } else if(selection == 'M' || selection == 'm') {
+
             if(list.empty()) {
                 cout << "Your list is empty, no mean value to find." << endl;
             } else {
@@ -62,6 +65,7 @@ int main() {
                 cout << "Your mean value is " << mean << endl;
             }
     } else if (selection == 'S' || selection == 's') {
+
         if(list.empty()) {
             cout << "List is Empty\n";
         }else {
@@ -74,6 +78,7 @@ int main() {
             cout << "The smallest number in the list is "<< smallest << endl;
         }
     } else if (selection == 'L' || selection == 'l') {
+
         if(list.empty()) {
             cout << "List is Empty" << endl;
         }else {
@@ -86,6 +91,7 @@ int main() {
             cout << "The smallest number in the list is "<< largest << endl;
         }
     } else {
+
         //This is the defaulting value for invalid key entries
         cout << "That is an invalid keypress, enter a key listed in the menu" << endl;
     }
@@ -93,3 +99,5 @@ int main() {
 
     return 0;
 }
+
+
